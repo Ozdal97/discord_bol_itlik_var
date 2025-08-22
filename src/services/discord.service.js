@@ -69,8 +69,16 @@ async function sendDM({userId, text}) {
         await user.send(text);
         return { ok: true };
     } catch (e) {
+        console.log(e)
         return { ok: false, error: e.message };
     }
 }
 
-module.exports = {disconnectFromVoice, kickFromGuild,sendDM};
+async function getUserId(userId){
+
+    const user = await client.users.fetch(userId);
+    return user.globalName ?? null;
+
+}
+
+module.exports = {disconnectFromVoice, kickFromGuild,sendDM,getUserId};

@@ -1,7 +1,6 @@
 {
   "name": "discord-bot",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +11,19 @@
     "discord.js": "^14.21.0",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "node-cron": "^4.2.1"
-  }
+    "node-cron": "^4.2.1",
+    "openai": "^5.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ozdal97/discord_bol_itlik_var.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ozdal97/discord_bol_itlik_var/issues"
+  },
+  "homepage": "https://github.com/Ozdal97/discord_bol_itlik_var#readme",
+  "description": ""
 }

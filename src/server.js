@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { createApp } = require("./app");
 const { loginDiscord, ready } = require("./discord/client");
-const { startActionCron } = require("./jobs/checkActions");
+const { startActionCron,discordMessage } = require("./jobs/checkActions");
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,7 +14,8 @@ const PORT = process.env.PORT || 3000;
         // 2) Express’i aç
         const app = createApp();
         app.listen(PORT, () => {
-            startActionCron();
+         //   startActionCron();
+            discordMessage();
             console.log(`🌐 HTTP listening on :${PORT}`);
             console.log(`➡️  POST /actions/kick       { guildId, userId, reason? }`);
             console.log(`➡️  POST /actions/disconnect { guildId, userId, reason? }`);
